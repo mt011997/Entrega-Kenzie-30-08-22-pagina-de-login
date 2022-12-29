@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/index.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="/Img/logo.png" alt="Imagem Logo">
+            <h2>Entretenimento e diversão para toda a família!</h2>
+            <p>Todos os Filmes e séries do momento!</p> 
+        </header>
+
+        <form>
+            <h2>Login:</h2>
+            <input name="email" id="emailInput" type="text" placeholder="Digite seu email">
+            <input name="password" id="passwordInput" type="password" placeholder="Digite sua senha">
+            <span class="recuperar_senha">Esqueci minha Senha.</span>
+            <button>Entrar</button>
+        </form>
+    
+        <!-- Modal -->
+
+        <form class="modal hidden">
+            <div class="container--modal">
+                <div class="modal__header">
+                    <h3>Recuperação de Senha</h3>
+                    <span class="close">X</span>
+                </div>
+                <p class="modal__text">Digite o email cadastrado para continuar com a recuperação:</p>
+                <input name="email" id="emailRecuperar" type="text" placeholder="Digite seu email">
+                <button class="modal__button">Enviar</button>
+            </div>
+        </form>
+    </div>
+    <script type="module" src="/script/index.js"></script>
+</body>
+</html>

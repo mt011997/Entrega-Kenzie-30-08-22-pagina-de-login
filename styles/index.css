@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+
+:root{
+    --bcg: #7FA4F8;
+    --primary: #053FC5;
+    --border: #1055F4;
+    --branco: #fff;
+    --body:#212529;
+}
+
+body{
+    display: flex;
+    background-color: var(--body) ;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+header{
+    background-color: var(--bcg);
+    font-family: 'Roboto Condensed', sans-serif;
+    display: flex;
+    height: 40vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+header img{
+    margin-top: 1.2rem;
+    width: 15rem;
+}
+
+header h2{
+    margin-top: 2rem;
+    text-align: center;
+    color: #053FC5;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+header p{
+    margin-top: 1.5rem;
+    text-align: center;
+    padding-bottom: 2rem;
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+form{   
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    height: 60vh;
+    align-items: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: var(--branco);
+}
+
+form h2{
+    font-weight: bold;
+    font-size: 2rem;
+    color: var(--primary);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+form input{
+    display: flex;  
+    width: 90%;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    padding: 5px;
+    margin: 10px auto;
+}
+
+form span{
+    font-size: 0.8rem;
+    cursor: pointer;
+    align-self: flex-end;
+    color: var(--primary);
+    margin-right: 1rem;
+}
+
+form button{
+    margin-top: 3rem;
+    padding: 10px;
+    border: 1px solid var(--border);
+    background-color: var(--border);
+    color: var(--branco);
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    width: 90%;
+}
+
+form button:hover{
+    background-color: var(--branco);
+    color: var(--primary);
+    cursor: pointer;
+}
+
+/* Modal */
+
+.modal{
+    display: flex;
+    flex-direction: column;
+    background-color: #00000090;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    animation-name: transicao;
+    animation-duration: 0.8s;
+}
+
+@keyframes transicao{
+    0%   {opacity: 0;}   
+    100% {opacity: 100;}
+}
+
+.container--modal{  
+    width: 95%;
+    background-color: var(--branco);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    justify-content: center;
+    max-width: 30rem;
+}
+
+.modal__header{
+    padding: 10px;
+    width: 100%;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;   
+}
+
+.modal__header h3{
+    font-size: 1.5rem;
+}
+
+.modal__header span{
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding-right: 0.3rem;
+}
+
+.modal__text{
+    padding: 10px;
+
+}
+
+.modal__button{
+    margin: 2rem auto;
+}
+
+.hidden{
+    animation-duration: 0.8s;
+    display: none;
+}
+
+@media (min-width: 768px){
+
+    body{
+        margin-top: 9rem;
+    }
+
+    form{
+        justify-content: center;
+    }
+
+    form input{
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
+    .container{
+        flex-direction: row;
+        max-width: 80rem;
+        max-height: 40rem;
+    }
+
+    header{
+        width: 50%;
+        height: 100%;
+    }
+    form{
+        width: 50%;
+        height: 100%;
+    }
+}
